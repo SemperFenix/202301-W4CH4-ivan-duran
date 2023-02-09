@@ -3,7 +3,6 @@ import { AppContext } from "../../context/context";
 
 export function Display() {
   const { phone } = useContext(AppContext);
-  const number = phone.number;
 
-  return <span className="number">{number}</span>;
+  return <span className="number">{phone}</span>;
 }
