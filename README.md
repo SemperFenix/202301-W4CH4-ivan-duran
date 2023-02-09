@@ -30,12 +30,14 @@ La aplicación debe mostrar un teléfono que cumpla con las siguientes caracter�
 
     - Contiene los botones numéricos.
     - Actualiza el estado referido al número mostrado en display.
-- Actions:
-  - Actualiza el número mostrado en display
-  - Compueba la longitud del número marcado
-  - Actualiza el estado de los botones llamar y colgar
-  - Actualiza el mensaje de info
 
-  - Action:
-    - Contiene los botones llamar y colgar
-    - Actualiza el estado para "Actions"
+- Actions va a ser el contexto:
+  - Contiene y gestiona el custom Hook que gestiona los estados.
+  - Actualiza el número mostrado en display.
+  - Compueba la longitud del número marcado.
+  - Actualiza el estado de los botones llamar y colgar.
+  - Actualiza el mensaje de info.
+
+- Action:
+        - Contiene los botones llamar y colgar
+        - Actualiza el estado para "Actions"
