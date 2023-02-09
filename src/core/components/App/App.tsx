@@ -1,4 +1,4 @@
-import { Action } from "../actions/action";
+import { Action } from "../action/action";
 import { Display } from "../display/display";
 import { Info } from "../info/info";
 import { Keyboard } from "../keyboard/keyboard";
