@@ -1,23 +1,16 @@
 import { useState } from "react";
-import { PhoneModel } from "../models/phone";
 
 export type UsePhoneStructure = ReturnType<typeof usePhone>;
 
 export function usePhone() {
-  const initialState = {
-    number: "",
-    isCallable: false,
-    isCalling: false,
-  } as PhoneModel;
+  const initialState = "";
   const [phone, setPhone] = useState(initialState);
 
   const updateNumber = (number: string) => {
-    phone.number += number;
-    setPhone(phone);
+    setPhone(phone + number);
   };
   const deleteNumber = () => {
-    phone.number = "" as string;
-    setPhone(phone);
+    setPhone("");
   };
 
   return { phone, updateNumber, deleteNumber };
