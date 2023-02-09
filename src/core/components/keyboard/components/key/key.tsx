@@ -1,4 +1,4 @@
-import { useContext, useEffect } from "react";
+import { useContext } from "react";
 import { AppContext } from "../../../../context/context";
 
 export function Key() {
@@ -114,7 +114,4 @@ export function Key() {
       </li>
     </ol>
   );
-}
-function updateNumber() {
-  throw new Error("Function not implemented.");
 }
