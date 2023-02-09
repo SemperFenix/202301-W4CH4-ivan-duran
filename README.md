@@ -41,3 +41,7 @@ La aplicación debe mostrar un teléfono que cumpla con las siguientes caracter�
 - Action:
         - Contiene los botones llamar y colgar
         - Actualiza el estado para "Actions"
+
+## Problemas
+
+En el deploy me daba error por el nombre de la carpeta y archivo `app`. Para solucionarlo he tenido que actualizarlo a `App`, comenzando por mayúsucula tal como lo crea Create React App al instalarse. Antes de eso, había modificado el nombre tanto en la carpeta, como en el archivo como en el import de index.tsx, pero el deploy seguía dando error.
