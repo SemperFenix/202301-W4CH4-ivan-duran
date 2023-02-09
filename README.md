@@ -44,4 +44,27 @@ La aplicación debe mostrar un teléfono que cumpla con las siguientes caracter�
 
 ## Problemas
 
-En el deploy me daba error por el nombre de la carpeta y archivo `app`. Para solucionarlo he tenido que actualizarlo a `App`, comenzando por mayúsucula tal como lo crea Create React App al instalarse. Antes de eso, había modificado el nombre tanto en la carpeta, como en el archivo como en el import de index.tsx, pero el deploy seguía dando error.
+- En el deploy me daba error por el nombre de la carpeta y archivo `app`. Para solucionarlo he tenido que actualizarlo a `App`, comenzando por mayúsucula tal como lo crea Create React App al instalarse. Antes de eso, había modificado el nombre tanto en la carpeta, como en el archivo como en el import de index.tsx, pero el deploy seguía dando error.
+- En el custom hook, si utilizaba un modelo basado en propiedades, no me permitía escribir en la pantalla:
+
+```jsx
+export function usePhone() {
+  const initialState = {
+    number: "",
+    isCallable: false,
+    isCalling: false,
+  } as PhoneModel;
+  const [phone, setPhone] = useState(initialState);
+
+  const updateNumber = (number: string) => {
+    phone.number += number;
+    setPhone(phone);
+  };
+  const deleteNumber = () => {
+    phone.number = "" as string;
+    setPhone(phone);
+  };
+
+  return { phone, updateNumber, deleteNumber };
+}
+```
